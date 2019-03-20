@@ -20,6 +20,8 @@ mixin mixinAttributes
 mixin spreadMixin(title, ...arg)
     p #{title}
     p= arg
+mixin testInclude
+    include ./test.jade
 .mixinContainer
     +list('hello')
     +paragraph('jaewofwjeofijefoiafj')
@@ -28,3 +30,5 @@ mixin spreadMixin(title, ...arg)
     - var style={ color: 'red' }
     +mixinAttributes()(class="class1", style=style)
     +spreadMixin('test spread mixin', 1, 2, 3)
+    +testInclude
+    +testInclude
