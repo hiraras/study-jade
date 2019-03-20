@@ -1,0 +1,4 @@
+jade [filename] 编译为html文件(没有格式化标签结构)
+jade -P [filename] 编译为html文件(舒适的标签结构)
+jade -w [filename] 当jade文件保存后实时编译出新的对应的html文档
+jade -o dir(目录) [filename] 将jade编译后的文件输出到指定目录

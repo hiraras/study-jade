@@ -1,0 +1,30 @@
+mixin list
+    ul
+        li 1
+        li 2
+
+mixin paragraph(text)
+    p= text
+
+mixin mixinBlock(title)
+    div(style={ border: '1px solid red' })
+        if block
+            h2= title
+            block
+        else
+            p not have block
+
+mixin mixinAttributes
+    p&attributes(attributes)= attributes.style
+
+mixin spreadMixin(title, ...arg)
+    p #{title}
+    p= arg
+.mixinContainer
+    +list('hello')
+    +paragraph('jaewofwjeofijefoiafj')
+    +mixinBlock('test block\'s title')
+        p this is a block
+    - var style={ color: 'red' }
+    +mixinAttributes()(class="class1", style=style)
+    +spreadMixin('test spread mixin', 1, 2, 3)

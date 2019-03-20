@@ -1,0 +1,32 @@
+.content
+    - var list = [1, 2, 3, 4]
+    each v in list
+        p this is content#{v}
+    block news
+        p news
+    - for (var i = 0; i < list.length; i += 1) {
+        p #{list[i]}
+    - }
+    - var classList = ['class1', 'class2', 'class3']
+    p(class = classList) end
+    p <strong>test plain text after tag with space</strong>
+    p!= '<strong>test plain text after tag with space 2</strong>'
+
+    - var varible = 'abc'
+    p= varible
+
+    each item in varible
+        p #{item}
+    p= varible
+
+    - var obj = { a: 1, b: 2, c: 3 };
+    each item, key in obj
+        p key=#{key} item=#{item}
+
+    - var str = 'hello world'
+    - var strTemplate = '<strong>hello world</strong>'
+    p= str
+    p #{str}
+    p= strTemplate
+    p #{strTemplate}
+    p !{strTemplate}

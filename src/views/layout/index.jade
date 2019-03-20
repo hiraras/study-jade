@@ -1,0 +1,22 @@
+doctype
+html
+    head
+        title layout
+        link(rel="stylesheet", href="../../css/index.css")
+    body
+        include ../components/header.jade
+        include ../components/section.jade
+        include ../components/mixin.jade
+        include ../components/footer.jade
+        block extra
+            //- 默认内容
+            p this is extra content
+        script.
+            var data = 123;
+            console.log(data);
+            function getA() {
+                return 'a';
+            }
+        script
+            | var a = 1;
+            | console.log(a);
