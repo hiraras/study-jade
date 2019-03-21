@@ -11,6 +11,11 @@ html
         block extra
             //- 默认内容
             p this is extra content
+        - classList = ['layout-class1', 'layout-class2', 'layout-class3']
+        p= classList
+
+        - classList = ['layout-classList2-class1', 'layout-classList2-class2']
+        p= classList
         script.
             var data = 123;
             console.log(data);

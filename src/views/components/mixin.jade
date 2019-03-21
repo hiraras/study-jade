@@ -24,7 +24,8 @@ mixin testInclude
     include ./test.jade
 .mixinContainer
     +list('hello')
-    +paragraph('jaewofwjeofijefoiafj')
+    +paragraph('this is a paragraph, this is a paragraph')
+    mixin paragraph('this is a test paragraph')
     +mixinBlock('test block\'s title')
         p this is a block
     - var style={ color: 'red' }
@@ -32,3 +33,4 @@ mixin testInclude
     +spreadMixin('test spread mixin', 1, 2, 3)
     +testInclude
     +testInclude
+    mixin testInclude

@@ -4,10 +4,11 @@
         p this is content#{v}
     block news
         p news
+            span(style="color: red") innner span
     - for (var i = 0; i < list.length; i += 1) {
         p #{list[i]}
     - }
-    - var classList = ['class1', 'class2', 'class3']
+    - classList = ['class1', 'class2', 'class3']
     p(class = classList) end
     p <strong>test plain text after tag with space</strong>
     p!= '<strong>test plain text after tag with space 2</strong>'
@@ -30,3 +31,37 @@
     p= strTemplate
     p #{strTemplate}
     p !{strTemplate}
+    input#my-input(type="text")
+    label(for="myInput") label啊
+    input(type="password")
+    input(type="checkbox", checked)
+    input(type="number")
+    //- 属性名对应的值为一个真值就可以
+    - var classObj = { class1: true, class2: false };
+    #testClass(class=classObj) 测试class=一个对象
+
+    - var friends = 0
+    //- when后面没有跟内容，这时匹配到这个when的话，就用下一个when中的值，如果一直没有
+    //- 就一直往下找when直到一个when有值，就取这个值，直到找到default为止
+    //- 如果default还没有则会报错
+    case friends
+        when 0
+        when 2: p you have two friends
+        when 1: p you have one friend
+        default
+            p you have #{friends} friends
+
+    - for(var i=0, len=3; i < len; i += 1)
+        p #{i} - #{len}
+        p #{i} + #{len}
+
+    p= classList
+
+    - var list = [1, 2, 3, 4]
+    //- 莫得self
+    each item, index in list
+        p item:#{item}, index:#{index}
+    
+    - var innerTag = '<strong>test tag after tag</strong>';
+    p(style="color: green") <strong>test tag after tag</strong>
+    p!= innerTag
