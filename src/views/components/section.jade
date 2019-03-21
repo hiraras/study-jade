@@ -1,10 +1,16 @@
 extends ./content.jade
 //-
     extends 之后则该文件会忽略其他标签，只保留extends中得到的内容
-//- 如果有block news 则block append和block prepend都无效
+    如果有block news 则block append和block prepend都无效
 block news
     p this is section's news
 block append news
     p after section
 block prepend news
     p before section
+
+//- 
+    上面的结论只针对同一个命名的block，
+    一个新的block应用新的规则
+block prepend footer
+    p prepend content

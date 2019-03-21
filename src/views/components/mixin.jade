@@ -22,7 +22,8 @@ mixin spreadMixin(title, ...arg)
     p= arg
 mixin testInclude
     include ./test.jade
-.mixinContainer
+.mixinContainer(style="border: 2px solid blue")
+    p this is mixin
     +list('hello')
     +paragraph('this is a paragraph, this is a paragraph')
     mixin paragraph('this is a test paragraph')

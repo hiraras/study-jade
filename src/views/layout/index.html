@@ -55,8 +55,11 @@
       <p>item:4, index:3</p>
       <p style="color: green"><strong>test tag after tag</strong></p>
       <p><strong>test tag after tag</strong></p>
+      <p>prepend content</p>
+      <p>this is default footer</p>
     </div>
-    <div class="mixinContainer">
+    <div style="border: 2px solid blue" class="mixinContainer">
+      <p>this is mixin</p>
           <ul>
             <li>1</li>
             <li>2</li>
@@ -70,21 +73,24 @@
           <p style="color:red" class="class1">color:red</p>
           <p>test spread mixin</p>
           <p>1,2,3</p>
-          <p style="color:red;background:blue">test component</p>
-          <p style="color:red;background:blue">test component</p>
-          <p style="color:red;background:blue">test component</p>
+          <p style="color:yellow;background:purple">test component</p>
+          <p style="color:yellow;background:purple">test component</p>
+          <p style="color:yellow;background:purple">test component</p>
     </div>
-    <div class="footerContainer">
-      <ul>
-        <li>support1</li>
-        <li>support2</li>
-        <li>support3</li>
-      </ul>
-      <p>footer-class1,footer-class2,footer-class3</p>
+    <div style="border: 4px solid green">
+      <h2>this is layout self content(not include part)</h2>
+      <p>layout-class1,layout-class2,layout-class3</p>
+      <p>layout-classList2-class1,layout-classList2-class2</p>
+      <div class="footerContainer">
+        <ul>
+          <li>support1</li>
+          <li>support2</li>
+          <li>support3</li>
+        </ul>
+        <p>footer-class1,footer-class2,footer-class3</p>
+      </div>
+      <p>this is extra content</p>
     </div>
-    <p>this is extra content</p>
-    <p>layout-class1,layout-class2,layout-class3</p>
-    <p>layout-classList2-class1,layout-classList2-class2</p>
     <script>
       var data = 123;
       console.log(data);

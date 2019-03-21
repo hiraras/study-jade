@@ -7,15 +7,18 @@ html
         include ../components/header.jade
         include ../components/section.jade
         include ../components/mixin.jade
-        include ../components/footer.jade
-        block extra
-            //- 默认内容
-            p this is extra content
-        - classList = ['layout-class1', 'layout-class2', 'layout-class3']
-        p= classList
+        div(style="border: 4px solid green")
+            h2 this is layout self content(not include part)
+            - classList = ['layout-class1', 'layout-class2', 'layout-class3']
+            p= classList
 
-        - classList = ['layout-classList2-class1', 'layout-classList2-class2']
-        p= classList
+            - classList = ['layout-classList2-class1', 'layout-classList2-class2']
+            p= classList
+            
+            include ../components/footer.jade
+            block extra
+                //- 默认内容
+                p this is extra content
         script.
             var data = 123;
             console.log(data);
